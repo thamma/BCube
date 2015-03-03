@@ -1,5 +1,7 @@
 package com.BCube;
 
+import java.util.List;
+
 public class Cube {
 
 	private Color[][] stickers;
@@ -18,22 +20,35 @@ public class Cube {
 		this.stickers = c;
 	}
 
-//	public void turnU() {
-//		movePrime(,
-//				);
-//	}
-	
-	public void move(Turn t) {
-			move(t.getOrig(), t.getDest());
-		}
+	// public void turnU() {
+	// movePrime(,
+	// );
+	// }
 
+	public void perform(Turn t) {
+		move(t.getOrig(), t.getDest());
+	}
+
+	public void perform(List<Turn> tl) {
+		for (Turn t: tl) {
+			perform(t);
+		}
+	}
+
+	public boolean isSolved() {
+		for (Color[] side : stickers)
+			for (int i = 0; i < side.length; i++)
+				if (!side[i].equals(side[4]))
+					return false;
+		return true;
+	}
 
 	public void move(int[][] orig, int[][] dest) {
-		//why can't I just 
-		//final newcube = stickers.clone() ...
+		// why can't I just
+		// final newcube = stickers.clone() ...
 		Color[][] newcube = new Color[6][9];
-		for (int i = 0; i<newcube.length;i++) {
-			for (int j = 0; j<newcube[i].length;j++) {
+		for (int i = 0; i < newcube.length; i++) {
+			for (int j = 0; j < newcube[i].length; j++) {
 				newcube[i][j] = stickers[i][j];
 			}
 		}
