@@ -66,8 +66,54 @@ public enum Turn {
 							
 							), 
 					
-					FrontPrime(Turn.Front.getDest(), Turn.Front.getOrig())
-					//Left, Down, Back, Right, Middle, Slice, Equator
+					FrontPrime(Turn.Front.getDest(), Turn.Front.getOrig()),
+					Left(     new int[][] {
+									new int[]{3,0},
+									new int[]{3,1},
+									new int[]{3,2},
+									new int[]{3,3},
+									new int[]{3,5},
+									new int[]{3,6},
+									new int[]{3,7},
+									new int[]{3,8},
+									new int[]{1,0},
+									new int[]{1,3},
+									new int[]{1,6},
+									new int[]{3,2},
+									new int[]{3,5},
+									new int[]{3,8},
+									new int[]{4,0},
+									new int[]{4,3},
+									new int[]{4,6},
+									new int[]{0,0},
+									new int[]{0,3},
+									new int[]{0,6},
+									
+							},
+							new int[][] {
+									new int[]{3,2},
+									new int[]{3,5},
+									new int[]{3,8},
+									new int[]{3,1},
+									new int[]{3,7},
+									new int[]{3,0},
+									new int[]{3,3},
+									new int[]{3,6},
+									new int[]{3,2},
+									new int[]{3,5},
+									new int[]{3,8},
+									new int[]{4,0},
+									new int[]{4,3},
+									new int[]{4,6},
+									new int[]{0,0},
+									new int[]{0,3},
+									new int[]{0,6},
+									new int[]{1,0},
+									new int[]{1,3},
+									new int[]{1,6},
+							}
+							), LeftPrime(Turn.Left.getDest(),Turn.Left.getOrig())
+							//,Down, Back, Right, Middle, Slice, Equator
 					;
 
 	private int[][] orig;
