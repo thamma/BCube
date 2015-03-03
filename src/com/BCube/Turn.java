@@ -17,8 +17,57 @@ public enum Turn {
 					new int[] { 1, 0 }, new int[] { 1, 1 },
 					new int[] { 1, 2 }, new int[] { 2, 2 },
 					new int[] { 2, 5 }, new int[] { 2, 8 }, })
-					,UpPrime(Turn.Up.getDest(), Turn.Up.getOrig())
-//					,Front, Left, Down, Back, Right, Middle, Slice, Equator
+					,UpPrime(Turn.Up.getDest(), Turn.Up.getOrig()),Front(
+							new int[][] {
+									new int[]{1,0},
+									new int[]{1,1},
+									new int[]{1,2},
+									new int[]{1,3},
+									new int[]{1,5},
+									new int[]{1,6},
+									new int[]{1,7},
+									new int[]{1,8},
+									new int[]{3,6},
+									new int[]{3,7},
+									new int[]{3,8},
+									new int[]{2,6},
+									new int[]{2,7},
+									new int[]{2,8},
+									new int[]{0,6},
+									new int[]{0,7},
+									new int[]{0,8},
+									new int[]{5,6},
+									new int[]{5,7},
+									new int[]{5,8},
+							},
+							new int[][] {
+									new int[]{1,2},
+									new int[]{1,5},
+									new int[]{1,8},
+									new int[]{1,1},
+									new int[]{1,7},
+									new int[]{1,0},
+									new int[]{1,3},
+									new int[]{1,6},
+									new int[]{2,6},
+									new int[]{2,7},
+									new int[]{2,8},
+									new int[]{0,6},
+									new int[]{0,7},
+									new int[]{0,8},
+									new int[]{5,6},
+									new int[]{5,7},
+									new int[]{5,8},
+									new int[]{3,6},
+									new int[]{3,7},
+									new int[]{3,8},
+							}
+							
+							
+							), 
+					
+					FrontPrime(Turn.Front.getDest(), Turn.Front.getOrig())
+					//Left, Down, Back, Right, Middle, Slice, Equator
 					;
 
 	private int[][] orig;
