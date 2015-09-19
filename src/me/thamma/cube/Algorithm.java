@@ -58,7 +58,7 @@ public class Algorithm {
 		return count;
 	}
 
-	public boolean affects(Piece p) {
+	public boolean affects(PieceOld p) {
 		for (int[] a : p.affected) {
 			Cube n = new Cube();
 			n.perform(this);
@@ -69,9 +69,9 @@ public class Algorithm {
 		return false;
 	}
 
-	public List<Piece> affected() {
-		List<Piece> l = new ArrayList<Piece>();
-		for (Piece p : Piece.values()) {
+	public List<PieceOld> affected() {
+		List<PieceOld> l = new ArrayList<PieceOld>();
+		for (PieceOld p : PieceOld.values()) {
 			if (affects(p)) {
 				l.add(p);
 			}
@@ -80,7 +80,7 @@ public class Algorithm {
 	}
 
 	public boolean affectsF2L() {
-		for (Piece p : affected()) {
+		for (PieceOld p : affected()) {
 			if (!p.name().contains("U"))
 				return true;
 		}

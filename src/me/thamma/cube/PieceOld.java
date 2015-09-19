@@ -1,6 +1,6 @@
 package me.thamma.cube;
 
-public enum Piece {
+public enum PieceOld {
 
 	UBL(new int[] { 0, 0 }, new int[] { 4, 6 },
 			new int[] { 2, 2 } ), UB( new int[] { 0, 1 },
@@ -12,7 +12,7 @@ public enum Piece {
 
 	public int[][] affected;
 
-	Piece(int[]... arg0) {
+	PieceOld(int[]... arg0) {
 		this.affected = arg0;
 	}
 

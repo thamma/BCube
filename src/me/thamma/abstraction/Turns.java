@@ -1,7 +1,7 @@
 package me.thamma.abstraction;
 
-public class Turns<Puzzle> {
+public interface Turns<T extends Puzzle> {
 
-	
-	
+	void apply(T puzzle);
+
 }

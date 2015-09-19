@@ -89,9 +89,9 @@ public class Cube {
 		System.out.println(times(10, "-"));
 	}
 
-	public List<Piece> affected() {
-		List<Piece> out = new ArrayList<Piece>();
-		for (Piece p : Piece.values()) {
+	public List<PieceOld> affected() {
+		List<PieceOld> out = new ArrayList<PieceOld>();
+		for (PieceOld p : PieceOld.values()) {
 			boolean temp = true;
 			for (int[] arr : p.affected) {
 				if (!stickers[arr[0]][arr[1]]
