@@ -5,41 +5,28 @@ import me.thamma.cube.Color;
 
 public enum Sticker3x3 implements Sticker<Cube3x3> {
 
-	// UBL(new int[] { 0, 0 }, new int[] { 4, 6 },
-	// new int[] { 2, 2 } ), UB( new int[] { 0, 1 },
-	// new int[] { 4, 7 } ), UBR(new int[] {0,2}, new int[] {4,8}, new int[]
-	// {5,0} ), UL(new int[] {0,3}, new int[] {2,5}), UR(
-	// new int[] {0,5}, new int[] {5,3}), UFL(new int[] {0,6}, new int[] {2, 8},
-	// new int[] {1,0}), UF(new int[] {0,7}, new int[] {1,1}), UFR(new int[]
-	// {0,8}, new int[] {1,2}, new int[] {5,6}), FL(new int[] {1,3}, new int[]
-	// {2,7}), FR(new int[] {1,5}, new int[] {5,7}), BL(new int[] {2,1}, new
-	// int[] {4,3}), BR(
-	// new int[] {4,5}, new int[] {5,1}), DFL(new int[] {1,6}, new int[] {2, 6},
-	// new int[] {3,8}), DF(new int[] {1,7}, new int[] {3,7}), DFR(new int[]
-	// {1,8}, new int[] {3,6}, new int[] {5, 8}), DL(new int[] {2,3}, new int[]
-	// {3,5}), DR(new int[] {5,5}, new int[] {3, 3}), DBL(new int[] {2,0}, new
-	// int[] {3,2}, new int[] {4, 0}), DB(
-	// new int[] {4,1}, new int[] {3, 1}), DBR(new int[] {4,2}, new int[] {5,2},
-	// new int[] {3,0});
-	// ;
-	TOdo(new int[] { 1, 2 });
+	ULB(new int[] { 0, 0 }), UB(new int[] { 0, 1 }), UBR(new int[] { 0, 2 }), UL(new int[] { 0, 3 }), UR(
+			new int[] { 0, 5 }), UFL(new int[] { 0, 6 }), UF(new int[] { 0, 7 }), URF(new int[] { 0, 8 }),
+	FLU(new int[] {1,0}),FU(new int[] {1,1}),FUR(new int[] {1,2}),FL(new int[] {1,3}),FR(new int[] {1,5}),FDL(new int[] {1,6}),FD(new int[] {1,7}),FRD(new int[] {1,8}),
+	LBU(new int[] {2,0}),LU(new int[] {2,1}),LUF(new int[] {2,2}),LB(new int[] {2,3}),LF(new int[] {2,4}),LDB(new int[] {2,5}),LD(new int[] {2,6}),LFD(new int[] {2,7}),
+	
+	
+	;
+
+	private int[] coordinate;
 
 	Sticker3x3(int[] a) {
-
+		this.coordinate = a;
 	}
 
 	@Override
 	public Color getColor(Cube3x3 puzzle) {
-		// TODO Auto-generated method stub
-		return null;
+		return puzzle.getColor(this.coordinate[0], this.coordinate[1]);
 	}
 
 	@Override
 	public int[] getCoordinate() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.coordinate;
 	}
-
-	
 
 }

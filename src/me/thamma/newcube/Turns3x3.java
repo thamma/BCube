@@ -1,6 +1,5 @@
 package me.thamma.newcube;
 
-import static me.thamma.newcube.Sticker3x3.*;
 import me.thamma.abstraction.Turns;
 
 public enum Turns3x3 implements Turns<Cube3x3> {
@@ -22,9 +21,9 @@ Turns3x3(int[][][] translations) {
 	public void apply(Cube3x3 puzzle) {
 		if (turnComposition == null) {
 			// TODO apply sticker translation to cube
-			for (int i = 0; i <stickerCycle.length; i++) {
+			for (int i = 0; i < stickerCycle.length; i++) {
 				int[][] cycle = stickerCycle[i];
-				
+
 			}
 		} else {
 			for (Turns3x3 turn : this.turnComposition) {
@@ -35,5 +34,5 @@ Turns3x3(int[][][] translations) {
 }
 
 class Resource {
-	public static final int[][][] Front = { { TOdo.getCoordinate() /* URL, UFR, URF something*/} };
+	public static final int[][][] Front = { {  } };
 }
